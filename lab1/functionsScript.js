@@ -31,6 +31,7 @@ var printVariables= function(value1,value2,value3){
     return [value1,value2,value3];
 };
 
+
 //--------------------------------------------------------------------------------------------------
 
 function summation(x,y){
