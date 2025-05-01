@@ -18,6 +18,7 @@
         }
         .error {
             color: red;
+            
             /* font-size: 0.9em; */
             display: none;
         }
@@ -77,20 +78,32 @@
     </select>
     
     <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Grade</th>
+                <th>Department</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
         <tbody>
             <tr>
                 <td>Eman</td>
                 <td>0</td>
+                <td>SD</td>
                 <td><span class="delete-btn" onclick="deleteRow(this)">&#128465;</span></td>
             </tr>
             <tr >
                 <td>Ahmed</td>
                 <td>90</td>
+                <td>SD</td>
                 <td><span class="delete-btn" onclick="deleteRow(this)">&#128465;</span></td>
             </tr>
             <tr>
                 <td>Mona</td>
                 <td>50</td>
+                <td>SD</td>
                 <td><span class="delete-btn" onclick="deleteRow(this)">&#128465;</span></td>
             </tr>
         </tbody>
