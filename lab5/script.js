@@ -138,3 +138,41 @@ function colorTable() {
         }
 }
 colorTable();
+
+//--------------------------------------------------------------------------------------------------------
+
+
+let taskTableBody = document.getElementById("taskTable").tBodies[0];
+
+        function addTask() {
+            let taskInput = document.getElementById("taskInput");
+            let task = taskInput.value;
+
+            if (task=="") return;
+
+            let rows = Array.from(taskTableBody.children);
+            let check = rows.some((elem) => {
+                return task == elem.cells[1].innerText;
+            });
+            if (check) return;
+
+            let row = document.createElement("tr");
+            row.innerHTML = `
+                <td><input type="checkbox" onchange="toggleDone(this)"></td>
+                <td>${task}</td>
+                <td><span class="delete-btn" onclick="deleteRow(this)">&#128465;</span></td>
+            `;
+            taskTableBody.appendChild(row);
+
+            taskInput.value = "";
+        }
+
+        function done(check) {
+            let row = check.parentElement.parentElement;
+            if (check.checked) {
+                row.children[1].style.textDecoration ="line-through";
+            } else {
+                row.children[1].style.textDecoration =""
+            }
+
+        }

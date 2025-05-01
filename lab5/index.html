@@ -29,6 +29,46 @@
         th, td {
             border: 1px solid #ddd;
         }
+
+
+        div{
+            align-items: center;
+            justify-items: center;
+            
+        }
+
+        h1 {
+            color: #b53c3c; /* Purple color from screenshot */
+            font-size: 24px;
+            text-align: center;
+        }
+        div input[type="text"] {
+            width: 500px;
+           
+        }
+        div table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-top: 20px;
+           
+        }
+        
+        div table th {
+            background-color: #FF4040; 
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f0f0f0; 
+        }
+        div .delete-btn {
+            cursor: pointer;
+            color: red;
+            font-size: 18px;
+        }
+        .done {
+            text-decoration: line-through;
+            background-color: #d3d3d3; 
+        }
         
     </style>
 </head>
@@ -108,6 +148,45 @@
             </tr>
         </tbody>
     </table>
+
+
+
+<div>
+    <h1>To Do Organizer</h1>
+    <div>
+        <input type="text" id="taskInput" placeholder="Go to Gym">
+        <button onclick="addTask()">Add</button>
+    </div>
+
+    <table id="taskTable">
+        <thead>
+            <tr>
+                <th>Done</th>
+                <th>Task</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" onchange="done(this)"></td>
+                <td>Practice JS MORE</td>
+                <td><span class="delete-btn" onclick="deleteRow(this)">&#128465;</span></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onchange="done(this)"></td>
+                <td>Go to Gym</td>
+                <td><span class="delete-btn" onclick="deleteRow(this)">&#128465;</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+    
+
+
+
 
 
     <script src="script.js"></script>
