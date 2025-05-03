@@ -176,3 +176,24 @@ let taskTableBody = document.getElementById("taskTable").tBodies[0];
             }
 
         }
+
+
+
+let a=1_00;
+let b=2_00.5;
+let c =1e2;
+let d =2.4;
+
+console.log(parseInt(Math.max(a,b,c,d)));
+console.log(Math.pow(a,parseInt(d)));
+console.log(parseInt(d));
+console.log(Math.round(d));
+console.log(Math.floor(d));
+console.log(Math.trunc(d));
+
+let z ="Elzero Web School";
+console.log( z.charAt(2).toUpperCase() + z.slice(3,6));
+console.log(z.slice(-4,-3).toUpperCase().repeat(8));
+console.log(z.split(" ",1));
+console.log(z.substr(0,6)+ z.substr(z.length-7))
+console.log(z.slice(0,2).toLowerCase() + z.slice(2).toUpperCase());

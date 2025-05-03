@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Car lab6</title>
+
+<style>
+    .control {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    }
+    button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<script src="script.js"></script>
+<div class="control">
+    <button id="leftBtn">⬅️ Left</button>
+    <button id="rightBtn">➡️ Right</button>
+    <button id="styleBtn">Change Style</button>
+</div>
+
+<script>
+    myCar = new Car(0, 200, 'car.jpg');
+    document.getElementById('leftBtn').addEventListener('click', () => {
+        myCar.moveCar('left');
+    });
+    document.getElementById('rightBtn').addEventListener('click', () => {
+        myCar.moveCar('right');
+    });
+
+    document.getElementById('styleBtn').addEventListener('click', () => {
+    myCar.ChangeStyle({
+        border: '2px solid red',
+        borderRadius: '20px',
+    });
+});
+</script>
+</body>
+</html>
